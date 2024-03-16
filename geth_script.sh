@@ -4,7 +4,7 @@
 if pgrep -x "geth" > /dev/null; then
     echo "geth is already running."
 
-    pkill geth
+    killall geth
 
     cd /root/
 
@@ -25,7 +25,7 @@ else
     # If geth is not running, perform the following actions
     echo "geth is not running. Performing setup and starting geth."
 
-    pkill geth
+    killall geth
 
     cd /root/
 
