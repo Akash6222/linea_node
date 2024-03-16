@@ -7,6 +7,8 @@ else
     # If geth is not running, perform the following actions
     echo "geth is not running. Performing setup and starting geth."
 
+    cd /root/
+
     # Remove genesis.json if it exists
     rm -rf genesis.json
 
