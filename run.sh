@@ -1,10 +1,5 @@
 #!/bin/bash
 
-CLONE_DIR="linea_node"
-
-# Move into the cloned directory
-cd $CLONE_DIR
-
 # Copy the linea_service.service to /etc/systemd/system/
 sudo cp custom_linea.service /etc/systemd/system/
 
