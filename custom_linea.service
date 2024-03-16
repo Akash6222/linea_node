@@ -1,0 +1,12 @@
+[Unit]
+Description=Geth Startup Script
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /root/start-geth.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
