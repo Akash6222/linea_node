@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Remove existing custom_linea.service and geth_script.sh
+rm -rf /etc/systemd/system/custom_linea.service
+rm -rf /root/geth_script.sh
+
 # Copy the linea_service.service to /etc/systemd/system/
 cp custom_linea.service /etc/systemd/system/
 
