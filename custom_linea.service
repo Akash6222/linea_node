@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /root/start-geth.sh
+ExecStart=/bin/bash /root/geth_script.sh
 Restart=on-failure
 
 [Install]
