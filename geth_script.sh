@@ -4,17 +4,11 @@
 if pgrep -x "geth" > /dev/null; then
     echo "geth is already running."
 
-    # Find all geth processes that are in a stopped state and resume them
-    pgrep -af geth | grep 'Tl' | awk '{print $1}' | while read pid; do
-        echo "Resuming stopped geth process with PID: $pid"
-        kill -CONT $pid
-    done
+    # Now, forcefully kill all geth processes
+    pkill -f geth
 
     # Give the processes a moment to resume
-    sleep 2
-
-    # Now, forcefully kill all geth processes
-    pkill -9 -f geth
+    sleep 120
 
     cd /root/
 
@@ -35,17 +29,11 @@ else
     # If geth is not running, perform the following actions
     echo "geth is not running. Performing setup and starting geth."
 
-    # Find all geth processes that are in a stopped state and resume them
-    pgrep -af geth | grep 'Tl' | awk '{print $1}' | while read pid; do
-        echo "Resuming stopped geth process with PID: $pid"
-        kill -CONT $pid
-    done
+    # Now, forcefully kill all geth processes
+    pkill -f geth
 
     # Give the processes a moment to resume
-    sleep 2
-
-    # Now, forcefully kill all geth processes
-    pkill -9 -f geth
+    sleep 120
 
     cd /root/
 
