@@ -14,7 +14,7 @@ if pgrep -x "geth" > /dev/null; then
     sleep 2
 
     # Now, forcefully kill all geth processes
-    pkill -9 geth
+    pkill -9 -f geth
 
     cd /root/
 
@@ -45,7 +45,7 @@ else
     sleep 2
 
     # Now, forcefully kill all geth processes
-    pkill -9 geth
+    pkill -9 -f geth
 
     cd /root/
 
